@@ -3,3 +3,21 @@
     width: 200px;
     margin: 0px 25px;
 }
+
+.dog-pic {
+    padding: 21px;
+    height: 90%;
+}
+
+.dog-pic-container {
+    width: 80%;
+    height: 50%;
+    margin: auto;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+}
