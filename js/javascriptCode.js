@@ -34,22 +34,13 @@
 
 // working dog.ceo code
 
-// var randomImage = "https://dog.ceo/api/breed/hound/images/random"
+var randomImage = "https://dog.ceo/api/breed/hound/images/random"
 
-// $.ajax({
-//   url: randomImage,
-//   method: "GET",
-// }).then(function (response) {
-//   console.log(response);
-// });
+$.ajax({
+  url: randomImage,
+  method: "GET",
+}).then(function (response) {
+  console.log(response);
+  response.message
+});
 
-var activeImageEl = $("<img>");
-activeImageEl.addClass("index-images");
-activeImageEl.attr(
-  "src",
-  "https://images.pexels.com/photos/618612/pexels-photo-618612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-);
-$("#attribute-images").append(activeImageEl);
-
-
-// somethign
