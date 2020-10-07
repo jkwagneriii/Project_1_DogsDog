@@ -34,8 +34,6 @@
 
 // Listens for a button to be clicked on the .html. 
 $("button").on("click", function () {
-  // empties the .dog-pic-container class of it's values (pictures)
-  $(".dog-pic-container").empty();
   // grabs the breed name from the button text
   var breed = $(this).text();
   // converts button text to lower case to use in API URL
@@ -47,6 +45,8 @@ $("button").on("click", function () {
     method: "GET",
   }).then(function (response) {
     console.log(response);
+  // empties the .dog-pic-container class of it's values (pictures)
+    $(".dog-pic-container").empty();
 
     //create an <img>
 
