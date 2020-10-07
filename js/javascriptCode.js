@@ -42,5 +42,17 @@ $.ajax({
 }).then(function (response) {
   console.log(response);
   response.message
+
+  //1 make piece of html
+
+  var image = $('<img>')
+
+  //2dress it up how uwant
+  image.attr('src',response.message )
+  image.addClass('dog-pic')
+
+  //3 append to the page
+  $('.dog-pic-container').append(image)
+
 });
 
