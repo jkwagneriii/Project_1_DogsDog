@@ -32,27 +32,31 @@
 
 // });
 
-// working dog.ceo code
+// Listens for a button to be clicked on the .html. 
+$("button").on("click", function () {
+  // empties the .dog-pic-container class of it's values (pictures)
+  $(".dog-pic-container").empty();
+  // grabs the breed name from the button text
+  var breed = $(this).text();
+  // converts button text to lower case to use in API URL
+  breed = breed.toLowerCase();
+  var randomImage = "https://dog.ceo/api/breed/" + breed + "/images/random";
 
-var randomImage = "https://dog.ceo/api/breed/hound/images/random"
+  $.ajax({
+    url: randomImage,
+    method: "GET",
+  }).then(function (response) {
+    console.log(response);
 
-$.ajax({
-  url: randomImage,
-  method: "GET",
-}).then(function (response) {
-  console.log(response);
-  response.message
+    //create an <img>
 
-  //1 make piece of html
+    var image = $("<img>");
 
-  var image = $('<img>')
+    // add the image src & a class
+    image.attr("src", response.message);
+    image.addClass("dog-pic");
 
-  //2dress it up how uwant
-  image.attr('src',response.message )
-  image.addClass('dog-pic')
-
-  //3 append to the page
-  $('.dog-pic-container').append(image)
-
+    //puts image at the bottom of dog-pic-container
+    $(".dog-pic-container").append(image);
+  });
 });
-
