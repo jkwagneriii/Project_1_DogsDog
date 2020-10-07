@@ -50,3 +50,6 @@ activeImageEl.attr(
   "https://images.pexels.com/photos/618612/pexels-photo-618612.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
 );
 $("#attribute-images").append(activeImageEl);
+
+
+// somethign
