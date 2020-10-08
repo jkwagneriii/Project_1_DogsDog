@@ -5,20 +5,18 @@
 }
 
 .dog-pic {
-    padding: 21px;
-    height: 90%;
+    height: 100%;
+    width: 100%;
 }
 
 .dog-pic-container {
-    padding: 15px 0 0 0;
-    width: 20px;
-    /* height: 20px; */
+    padding: 0;
+    width: 220px;
+    height: 175px;
     top: 70%;
     left: 0;
     bottom: 0px;
     right: 0;
-    text-align: center;
-    text-transform: uppercase;
 }
 
 .dog-info-container {
