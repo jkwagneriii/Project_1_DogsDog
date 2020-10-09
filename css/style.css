@@ -4,6 +4,7 @@
   margin: 0px 25px;
 }
 
+/* Styling for the dog picture container  */
 .dog-pic {
   height: 100%;
   width: 100%;
@@ -23,6 +24,29 @@
   color: black;
 }
 
+/* Button CSS  */
+.pure-button {
+    background-color: #1f8dd6;
+    color: white;
+    padding: 5px;
+    margin: 4px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0 3px rgb(63, 63, 63);;
+}
+
+.pure-button:hover {
+    background-color: #175d8c;
+}
+
+.button:active {
+    background-color: #175d8c;
+    box-shadow: 0 5px rgb(0, 0, 0);
+    transform: translateY(4px);
+  }
+
+/* Background images for each page  */
 #activeLifestyle-splash {
   background-image: url(../assets/chewy-ScEXB6uxOVc-unsplash.jpg);
   background-position: center;
