@@ -1,7 +1,12 @@
 # Project_1_DogsDog
 A Guide to Dog Breeds per Lifestyles
 
+GITHUB LINKS
+
+https://jkwagneriii.github.io/Project_1_DogsDog/
+
 https://github.com/jkwagneriii/Project_1_DogsDog
+
 ```
 GIVEN I am looking for a dog breed that suits me
 WHEN I land on the homepage I see lifestyle choices
