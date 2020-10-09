@@ -41,8 +41,6 @@ $("button").on("click", function () {
 
     //puts image at the bottom of dog-pic-container
     $(".dog-pic-container").append(image);
-    //scroll to the bottom of the page with each click
-    window.scrollTo(0, 600);
   });
 
   var settings = {
@@ -76,6 +74,8 @@ $("button").on("click", function () {
       const element = breedInfoArray[index];
       var liBreedInfo = $("<li>").text(element);
       $(".dog-info-container").append(liBreedInfo);
+      //scroll to the bottom of the page with each click
+      window.scrollTo(0, 600);
     }
   });
 });
