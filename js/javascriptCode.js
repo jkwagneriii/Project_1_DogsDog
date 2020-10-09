@@ -60,12 +60,12 @@ $("button").on("click", function () {
     $(".dog-info-container").empty();
     // An array that contains wanted objects from the ajax call.
     var breedInfoArray = [
-      response[0].bred_for,
-      response[0].breed_group,
-      response[0].height.imperial,
-      response[0].life_span,
-      response[0].temperament,
-      response[0].weight.imperial,
+      "Bred for: " + response[0].bred_for,
+      "Breed Group: " + response[0].breed_group,
+      "Height: " + response[0].height.imperial + " (in)",
+      "Life Span: " + response[0].life_span,
+      "Temperament: " + response[0].temperament,
+      "Weight: " + response[0].weight.imperial + " (lbs)",
     ];
     // titles the list with dog breed name
     $(".dog-info-container").text(response[0].name);
