@@ -44,7 +44,7 @@
     background-color: #175d8c;
     box-shadow: 0 5px rgb(0, 0, 0);
     transform: translateY(4px);
-  }
+}
 
   .pure-g [class*=pure-u] {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -85,8 +85,31 @@
 .splash-subhead {
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: black;
-  font-size: 2rem;
+  font-size: 1.5rem;
   line-height: 1.5;
   font-family: fantasy;
   color: darkgrey;
 }
+
+/* Content Styling  */
+.content-wrapper {
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    min-height: 12%;
+    z-index: 2;
+    background: white;
+}
+
+@media only screen and (max-width: 1300px) {
+    .splash-subhead {
+        -webkit-text-stroke-width: 2px;
+        -webkit-text-stroke-color: black;
+        font-size: 1rem;
+        line-height: 1.5;
+        font-family: fantasy;
+        color: darkgrey;
+    }
+  }
+
+
