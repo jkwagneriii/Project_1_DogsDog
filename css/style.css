@@ -21,7 +21,7 @@
 }
 
 .dog-info-container {
-  color: black;
+  color: white;
 }
 
 /* Button CSS  */
@@ -45,6 +45,10 @@
     box-shadow: 0 5px rgb(0, 0, 0);
     transform: translateY(4px);
   }
+
+  .pure-g [class*=pure-u] {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
 
 /* Background images for each page  */
 #activeLifestyle-splash {
