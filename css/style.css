@@ -22,3 +22,33 @@
 .dog-info-container {
     color: black;
 }
+
+#activeLifestyle-splash {
+    background-image: url(
+        ../assets/chewy-ScEXB6uxOVc-unsplash.jpg
+    ) ;
+    background-position: center ;
+    background-size: cover ;
+}
+#chillingLifestyle-splash {
+    background-image: url(
+        ../assets/yogendra-singh-WqFdabDvDeA-unsplash.jpg
+    ) ;
+    background-position: center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#huntingLifestyle-splash {
+    background-image: url(
+        ../assets/seth-schulte-zYJ9cVjHyZA-unsplash.jpg
+    ) ;
+    background-position: center ;
+    background-size: cover ;
+}
+#serviceAnimal-splash {
+    background-image: url(
+        ../assets/ralph-ravi-kayden-bjU0FvDuHJA-unsplash.jpg
+    ) ;
+    background-position: center ;
+    background-size: cover ;
+}
