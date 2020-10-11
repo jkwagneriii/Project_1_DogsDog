@@ -15,8 +15,23 @@
 
 // working thedogapi.com code
 var apiKey = "e999b8a7-faae-4667-b727-40d705c95128";
+var breedHistory = ["test"];
 
-$("button").on("click", function () {
+if (breedHistory != null) {
+  // breedHistory = JSON.parse(localStorage.getItem("favorites"));
+  renderFavorites();
+}
+
+function renderFavorites() {
+  for (let index = 0; index < breedHistory.length; index++) {
+    const breed = breedHistory[index];
+    $("#breedHistory").append(
+      $("<button>").attr("class", "breed-button").text(breed)
+    );
+  }
+}
+
+$(".breed-button").on("click", function () {
   // grabs the breed name from the button text
   var breed = $(this).text();
   // converts button text to lower case to use in API URL
@@ -41,6 +56,17 @@ $("button").on("click", function () {
 
     //puts image at the bottom of dog-pic-container
     $(".dog-pic-container").append(image);
+    $(".dog-pic-container").append(
+      $("<button>")
+        .text("Add this breed to Favorites")
+        .attr("class", "favorite-button")
+    );
+    // add selected breed to favorites list
+    $(".favorite-button").on("click", function() {
+      breedHistory.push(breed);
+      // add into localStorage, must go in as a string
+      // execute renderFavorites again
+    });
   });
 
   var settings = {
