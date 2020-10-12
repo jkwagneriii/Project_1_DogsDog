@@ -7,6 +7,11 @@ https://jkwagneriii.github.io/Project_1_DogsDog/
 
 https://github.com/jkwagneriii/Project_1_DogsDog
 
+Images 
+
+[![Index](/assets/README-pics/index.png)](https://jkwagneriii.github.io/Project_1_DogsDog)
+[![example_page](/assets/README-pics/example_page.png)](https://jkwagneriii.github.io/Project_1_DogsDog/common/chillingLifestyle.html)
+
 ```
 GIVEN I am looking for a dog breed that suits me
 WHEN I land on the homepage I see lifestyle choices
