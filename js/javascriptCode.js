@@ -15,20 +15,36 @@
 
 // working thedogapi.com code
 var apiKey = "e999b8a7-faae-4667-b727-40d705c95128";
-var breedHistory = ["test"];
+var breedHistory = [];
+init();
+// Check localStorage and see if there are "favorites" to parse into breedHistory
 
-if (breedHistory != null) {
-  // breedHistory = JSON.parse(localStorage.getItem("favorites"));
+// if (breedHistory != null) {
+//   breedHistory = JSON.parse(localStorage.getItem("favorites"));
+//   renderFavorites();
+// }
+
+function init() {
+  storedBreedHistory = JSON.parse(localStorage.getItem("favorites"));
+  console.log(storedBreedHistory);
+  if (storedBreedHistory !== null) {
+    breedHistory = storedBreedHistory;
+  }
   renderFavorites();
 }
 
 function renderFavorites() {
+  $("#breedHistory").empty();
+  // console.log(breedHistory.length)
   for (let index = 0; index < breedHistory.length; index++) {
     const breed = breedHistory[index];
     $("#breedHistory").append(
-      $("<button>").attr("class", "breed-button").text(breed)
+      $("<button>")
+        .attr("class", "breed-button pure-button pure-button-active")
+        .text(breed)
     );
   }
+  $("#breedHistory").prepend("Favorites: ");
 }
 
 $(".breed-button").on("click", function () {
@@ -42,7 +58,7 @@ $(".breed-button").on("click", function () {
     url: randomImage,
     method: "GET",
   }).then(function (response) {
-    console.log(response);
+    // console.log(response);
     // empties the .dog-pic-container class of it's values (pictures)
     $(".dog-pic-container").empty();
 
@@ -59,13 +75,19 @@ $(".breed-button").on("click", function () {
     $(".dog-pic-container").append(
       $("<button>")
         .text("Add this breed to Favorites")
-        .attr("class", "favorite-button")
+        .attr("class", "favorite-button pure-button pure-button-active")
     );
     // add selected breed to favorites list
-    $(".favorite-button").on("click", function() {
-      breedHistory.push(breed);
-      // add into localStorage, must go in as a string
-      // execute renderFavorites again
+    $(".favorite-button").on("click", function () {
+      // check breedHistory for the string within breed, if it's not there execute .push();
+      if (breedHistory.indexOf(breed) == -1) {
+        console.log(breed);
+        breedHistory.push(breed);
+        // add into localStorage, must go in as a string
+        localStorage.setItem("favorites", JSON.stringify(breedHistory));
+        // execute renderFavorites again
+        renderFavorites();
+      }
     });
   });
 
